@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir='rtl' lang='ar'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InTeXt</title>
+<style>
+body{
+  background: #ffffff;
+}
+ul{margin:0;padding:0}
+*{text-decoration:none;margin:0;padding:0;outline:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+#page a {
+width:110px;
+border:2px solid #ffffff;
+height:140px;
+display:inline-block;
+margin-bottom:10px;
+border-radius:8px;
+text-decoration:none;
+margin-right: 5px;
+margin-top:20px;
+}
+#page a img {
+height:140px;
+width:100%;
+border-radius:8px;
+padding-bottom:4px;
+}
+#page a p {
+text-align:center;
+font-size:13px;
+font-weight:600;
+}
+p{
+  width: 108px;
+  color: #fff;
+  border:2px solid #ba423a;
+  border-radius: 5px;
+  padding: 5px;
+  background: #ba423a;
+}
+</style>
+
+</head>
+<body>
+
+ <br>
+ <br>
+<div id="page">
+
+<a href="pages/number.html">
+<img src="img/img03.jpg"><p>أرقام</p></a>
+
+<a href="pages/time.html">
+<img src="img/img02.jpg"><p>وقت</p></a>
+
+<a href="pages/Day">
+<img src="img/img01.jpg"><p>أشهر السنة</p></a>
+
+<a href="pages/Colors">
+<img src="img/img04.jpg"><p>الالوان</p></a>
+
+<a href="pages/direction">
+<img src="img/img05.jpg"><p>اتجاهات</p></a>
+
+<a href="pages/treatment">
+<img src="img/img06.jpg"><p>علاج</p></a>
+
+<a href="pages/tools">
+<img src="img/img08.jpg"><p>ادوات</p></a>
+
+<a href="pages/Human-body">
+<img src="img/img18.jpg"><p>جسم الانسان</p></a>
+
+<a href="pages/family-members">
+<img src="img/img09.jpg"><p>العائلة</p></a>
+
+<a href="pages/house">
+<img src="img/img16.jpg"><p>المنزل</p></a>
+
+<a href="pages/food">
+<img src="img/img07.jpg"><p>طعام وشراب</p></a>
+
+<a href="pages/weather">
+<img src="img/img15.jpg"><p>طقس</p></a>
+
+<a href="pages/clothes">
+<img src="img/img11.jpg"><p>ملابس</p></a>
+
+<a href="pages/job">
+<img src="img/img17.jpg"><p>وظيفة</p></a>
+
+<a href="pages/animals">
+<img src="img/img14.jpg"><p>حيوانات</p></a>
+
+<a href="pages/city">
+<img src="img/img13.jpg"><p>المدينة</p></a>
+
+<a href="pages/vegetables-and-fruits">
+<img src="img/img12.jpg"><p>خضر وفواكه</p></a>
+
+<a href="pages/nature">
+<img src="img/img10.jpg"><p>طبيعة</p></a>
+
+</div>
+ <br>
+ <br>
+ <br>
+
+ <script>
+       //NavBar
+       function hideIconBar() {
+         var iconBar = document.getElementById("iconBar");
+         var navigation = document.getElementById("navigation");
+         iconBar.setAttribute("style", "display:none;");
+         navigation.classList.remove("hide");
+       }
+ 
+       function showIconBar() {
+         var iconBar = document.getElementById("iconBar");
+         var navigation = document.getElementById("navigation");
+         iconBar.setAttribute("style", "display:block;");
+         navigation.classList.add("hide");
+       }
+ 
+       //Comment
+       function showComment() {
+         var commentArea = document.getElementById("comment-area");
+         commentArea.classList.remove("hide");
+       }
+ 
+       //Reply
+       function showReply() {
+         var replyArea = document.getElementById("reply-area");
+         replyArea.classList.remove("hide");
+       }
+     </script>      
+                 
+           
+</body>
+</html>
