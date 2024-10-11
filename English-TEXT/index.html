@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Toddler Fun Area | Learning: Alphabets</title>
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-waqnr0');
+	src:url('../fonts/icomoon.eot?#iefix-waqnr0') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-waqnr0') format('woff'),
+		url('../fonts/icomoon.ttf?-waqnr0') format('truetype'),
+		url('../fonts/icomoon.svg?-waqnr0#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background: #ba423a;
+	background-size: 200vh;
+	font:14px/1.5em Verdana, Geneva, sans-serif;
+	color:#444;
+}
+
+@media (min-width:1024px) {
+body {
+	background-size: 100vw 100vh;
+	background-repeat: repeat;
+ }
+}
+
+a
+{
+   text-decoration:none;
+   outline:none;
+}
+
+
+a img {
+  border:none;
+}
+
+.container
+{
+  margin: 3% auto;
+  position:relative;
+  min-height:600px;
+}
+
+@media (min-width:1024px){
+.container{
+	width:960px;
+ }
+}
+
+.cf:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.off
+{
+  display:none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.no-show{
+  visibility:hidden;
+  opacity: 0;
+}
+
+.transition{
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.loading
+{
+  font-size:1.5em;
+  font-weight:bold;
+  width:100%;
+  position:absolute;
+  top:30%;
+  left:30%;
+}
+
+#progressbar
+{
+  border:2px solid #777;
+  width:50%;
+}
+
+#progressbar p
+{
+  margin:0;
+  padding:1% 0;
+  width:0;
+  background-color:#f5f80c;
+}
+
+
+.side-nav{
+	list-style:none;
+	padding-left:0;
+}
+
+.side-nav li{
+	float:left;
+	width:25%;
+	text-align:center;
+}
+
+@media(min-width:992px){
+.side-nav{
+	float:left;
+	list-style:none;
+	width:15%;
+	padding-left:0;
+}
+.side-nav li{
+	float:none;
+	margin-bottom:15px;
+	width: 100%;
+}
+}
+
+@media(min-width:1024px){
+.side-nav li{
+	margin-bottom:0;
+}
+}
+
+.side-nav li a img{
+	width:100%;
+}
+
+@media (min-width:1200px){
+.side-nav li a img{
+	width:100%;
+}
+}
+
+.side-nav li:hover img{
+  -moz-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+
+.main_content{
+	clear: both;
+	margin:0 auto 3%;
+	margin-top: 40px;
+	width:95%;
+	padding:2% 5%;
+	border:3px solid #7b8f8e;
+	border-radius:15px;
+	background: #c7dcda; /* Fall back for browsers that donot support transparency */
+	background: rgba(199, 220, 218, 0.8);
+}
+@media(min-width:992px){
+.main_content{
+	float:right;
+	width:80%;
+	clear:none;
+}
+}
+
+h1,
+h2,
+h3{
+	text-align:center;
+	line-height: 1.4;
+}
+
+.main_content a{
+	color:#00B;
+}
+
+.main_content a:hover{
+	text-decoration:underline;
+}
+
+.slide{
+	width:50%;
+	float:left;
+	text-align:center;
+}
+
+.slide img{
+	border-radius:12px;
+	border:1px solid #7b8f8e;
+	width:70%;
+}
+
+.games-slide a img,
+.learning-slide a img{
+	width:100%;
+}
+p{
+  border-radius: 5px;
+}
+.note{
+	clear:both;
+	text-align:center;
+	font-size:small;
+}
+
+.box-wrap{
+	float:left;
+	width:50%;
+	margin:0 auto;
+}
+.box{
+	padding:0 9% 5%;
+}
+
+@media(min-width: 768px){
+.box-wrap{
+	width:33.33%;
+}
+}
+
+.box h4{
+	text-align:center;
+	color:#900;
+	margin:10px auto;
+	line-height: normal;
+}
+
+.box img{
+	width:100%;
+	text-align:center;
+	border-radius:12px;
+	border:4px solid #bbb;
+	-webkit-box-shadow: 0px 3px 5px -1px #333;
+    box-shadow: 0px 3px 5px -1px #333;  
+}
+
+.box img:hover{
+   -webkit-transform: rotate(5deg);
+   -moz-transform: rotate(5deg);
+   -o-transform: rotate(5deg);
+   -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+.scratch_games{
+	clear:both;
+	float:right;
+}
+
+.scratch_games a{
+	color:#fff;
+	font-weight:bold;
+	display:inline-block;
+	padding:10px;
+	line-height:20px;
+	background-color:#09F;
+	border-radius:30%/100%;
+	margin-left:5px;
+}
+
+#win-img,
+#game-over-img
+{
+  width:100%;
+  position:absolute;
+  top:20%;
+  left:10%;
+  display:none;
+  text-align:center;
+}
+
+#win-img img,
+#game-over-img img
+{
+	width:70%;
+}
+
+@media(min-width:600px){
+#win-img img,
+#game-over-img img
+{
+	width:50%;
+}
+}
+
+.button-box{
+	margin: 5px auto 10px;
+	position:relative;
+}
+
+.game-button{
+  font-size: 20px;
+  font-weight:bold;
+  color:white;
+  background-color:#005387;
+  border:2px solid #fff;
+  border-radius:5px;
+  padding:15px 40px;
+}
+
+.game-button:hover{
+  background-color:#0092bf;
+  cursor:pointer;
+}
+
+.speaker-controls{
+	position:absolute;
+	top:-5px;
+	left:150px;
+}
+
+.note{
+ clear:both;
+ text-align: justify; 
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.embed-responsive.embed-responsive-4by3 {
+   padding-bottom: 75%;
+}
+
+.slides{
+	position:relative;
+}
+
+#prev{
+	position:absolute;
+	background: red;
+	border: 1px solid black;
+	width: 70px;
+	height: 50px;
+	top:40%;
+	left:-7%;
+}
+
+#next{
+	position:absolute;
+	background: red;
+	border: 1px solid black;
+	width: 70px;
+	height: 50px;
+	top:40%;
+	right:-7%;
+}
+
+.icons{
+    font-family: 'icomoon';
+	font-size: 3rem;
+	margin-top: 300px;
+	cursor:pointer;
+	color:#444;
+}
+
+@media(min-width:768px){
+#prev{
+	left:-4%;
+}
+
+#next{
+	right:-4%;
+}
+	
+.icons{
+	font-size:25px;
+}
+}
+.icons span{
+font-size: 1rem;
+color: #fff;
+margin-left: 15px;
+}
+
+.hide{
+	visibility:hidden;
+}
+
+#slide-indicator{
+	clear:both;
+	margin-top:20px;
+}
+
+.facebook-like{
+	clear:both;
+	float:left;
+	margin:10px;
+}
+
+p.less-margin{
+	margin:0 auto 5px;
+}
+
+.hidden-xs{
+	display: none;
+}
+.visible-sm{
+	clear:both;
+	display: block;
+}
+
+@media (min-width:768px){
+.hidden-xs{
+	display: block;
+}
+.visible-sm{
+	display: none;
+}
+}
+    h1{
+	text-align:center;
+}
+
+#leftside-display div,
+#rightside-display div{
+	display:none;
+}
+
+#leftside-display div.active,
+#rightside-display div.active{
+	display:block;
+}
+
+#leftside-display div{
+	background-color:#8889c9;border-radius: 10px;
+}
+
+#leftside-display div,
+#rightside-display div img{
+	border:3px solid #7b8f8e;
+	margin:20px 0 0;
+}
+
+#rightside-display div img{
+	width:100%;
+}
+
+h2{
+	font-size:30px;
+}
+
+@media(min-width:768px){
+h2{
+	font-size:40px;
+	padding:20px;
+}
+	
+#leftside-display div,
+#rightside-display div{
+	float:left;
+	width:48%;
+}
+
+
+#rightside-display div{
+	margin-left:4%;
+}
+	
+}
+
+@media(min-width:820px){
+h2{
+	font-size:60px;
+}
+}
+
+#slide-indicator p{
+	float:left;
+	width:40px;
+	height:40px;
+	border:3px solid #7b8f8e;
+	background-color:lightblue;
+	cursor:pointer;
+	opacity:0.7;
+	font-size:25px;
+	line-height:30px;
+	text-align:center;
+	margin:5px;
+}
+
+#slide-indicator p.active{
+	opacity:1;
+}
+.rtr{
+  width: 40px;
+height: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px;
+}
+  </style>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="learning1.js"></script>
+</head>
+<body>
+<div class="container cf">
+
+  <div class="main_content cf">
+    
+    <div class="slides cf">
+    
+      <div id="leftside-display">
+        <div class="active">
+<h1>small</h1>
+<h2>صغير</h2>
+<audio preload="auto" id="audio1" src="mp3/small.mp3"></audio></div>
+
+<div>
+<h1>big</h1>
+<h2>كبير</h2>
+<audio preload="auto" id="audio9" src="mp3/big.mp3"></audio>
+</div>
+
+<div>
+<h1>Beautiful</h1>
+<h2>جميل</h2>
+<audio preload="auto" id="audio8" src="mp3/beautiful.mp3"></audio></div>
+
+<div>
+<h1>ugly</h1>
+<h2>قبيح</h2>
+<audio preload="auto" id="audio2" src="mp3/ugly.mp3"></audio></div>
+
+<div>
+<h1>wide</h1>
+<h2>واسع</h2>
+<audio preload="auto" id="audio3" src="mp3/wide.mp3"></audio></div
+>
+<div>
+<h1>narrow</h1>
+<h2>ضيق</h2>
+<audio preload="auto" id="audio4" src="mp3/narrow.mp3"></audio></div>
+
+<div>
+<h1>Tall</h1>
+<h2>طويل</h2>
+<audio preload="auto" id="audio5" src="mp3/tall.mp3"></audio></div>
+
+  <div>
+<h1>Short</h1>
+<h2>قصير</h2>
+<audio preload="auto" id="audio7" src="mp3/short.mp3"></audio></div>
+
+ <div>
+<h1>Fat</h1>
+<h2>سمين</h2>
+<audio preload="auto" id="audio6" src="mp3/fat.mp3"></audio></div>
+<div>
+
+<h1>Skinny</h1>
+
+<h2>نحيف</h2>
+<audio preload="auto" id="audio11" src="mp3/skinny.mp3"></audio></div>
+
+<div>
+<h1>Hot</h1>
+<h2>ساخن</h2>
+<audio preload="auto" id="audio10" src="mp3/hot.mp3"></audio></div>
+
+<div>
+<h1>Cool</h1>
+<h2>بارد</h2>
+<audio preload="auto" id="audio3" src="mp3/cool.mp3"></audio></div>
+
+<div>
+<h1>Sweet</h1>
+<h2>حلو</h2>
+<audio preload="auto" id="audio4" src="mp3/sweet.mp3"></audio></div>
+
+<div>
+<h1>Bitter</h1>
+<h2>مر</h2>
+<audio preload="auto" id="audio5" src="mp3/bitter.mp3"></audio></div>
+
+<div>
+<h1>Tall</h1>
+<h2>عالي</h2>
+<audio preload="auto" id="audio7" src="mp3/tall.mp3"></audio></div>
+  <div>
+<h1>Low</h1>
+<h2>منخفض</h2>
+<audio preload="auto" id="audio6" src="mp3/low.mp3"></audio></div>
+
+  <div>
+<h1>Good</h1>
+<h2>طيب</h2>
+<audio preload="auto" id="audio11" src="mp3/good.mp3"></audio></div>
+
+<div>
+<h1>bad</h1>
+<h2>سيء</h2>
+<audio preload="auto" id="audio10" src="mp3/bad.mp3"></audio></div>
+
+  <div>
+<h1>intelligent</h1>
+<h2>ذكي</h2>
+<audio preload="auto" id="audio3" src="mp3/intelligent.mp3"></audio></div>  
+
+<div>
+<h1>Stupid</h1>
+<h2>غبي</h2>
+<audio preload="auto" id="audio4" src="mp3/stupid.mp3"></audio></div
+>
+
+<div>
+<h1>New</h1>
+<h2>جديد</h2>
+<audio preload="auto" id="audio5" src="mp3/new.mp3"></audio></div>
+
+<div>
+<h1>Old</h1>
+<h2>قديم</h2>
+<audio preload="auto" id="audio7" src="mp3/old.mp3"></audio></div>
+
+<div>
+<h1>Light</h1>
+<h2>خفيف</h2>
+<audio preload="auto" id="audio6" src="mp3/light.mp3"></audio></div>
+
+  <div>
+<h1>Heavy</h1>
+<h2>ثقيل</h2>
+<audio preload="auto" id="audio11" src="mp3/heavy.mp3"></audio></div>
+
+<div>
+<h1>Cheap</h1>
+<h2>رخيصة</h2>
+<audio preload="auto" id="audio3" src="mp3/cheap.mp3"></audio></div>
+
+<div>
+<h1>Expensive</h1>
+<h2>غالي</h2>
+<audio preload="auto" id="audio10" src="mp3/expensive.mp3"></audio></div>
+
+ <div>
+<h1>Dry</h1>
+<h2>جاف</h2>
+<audio preload="auto" id="audio5" src="mp3/dry.mp3"></audio></div>
+          
+<div>
+<h1>humid</h1>
+<h2>رطب</h2>
+<audio preload="auto" id="audio4" src="mp3/humid.mp3"></audio></div>
+       
+<div>
+<h1>slow</h1>
+<h2>بطئ</h2>
+<audio preload="auto" id="audio6" src="mp3/slow.mp3"></audio></div>
+          
+<div>
+<h1>Fast</h1>
+<h2>سريع</h2>
+<audio preload="auto" id="audio7" src="mp3/fast.mp3"></audio></div>
+           
+<div>
+<h1>Empty</h1>
+<h2>فارغ</h2>
+<audio preload="auto" id="audio10" src="mp3/empty.mp3"></audio></div>
+   
+<div>
+<h1>full</h1>
+<h2>ممتلىء</h2>
+<audio preload="auto" id="audio11" src="mp3/full.mp3"></audio></div>       
+       
+<div>
+<h1>dirty</h1>
+<h2>قذر</h2>
+<audio preload="auto" id="audio4" src="mp3/dirty.mp3"></audio></div>
+           
+<div>
+<h1>Clean</h1>
+<h2>نظيف </h2>
+<audio preload="auto" id="audio3" src="mp3/clean.mp3"></audio></div>
+       
+<div>
+<h1>Sick</h1>
+<h2>مريض</h2>
+<audio preload="auto" id="audio5" src="mp3/sick.mp3"></audio></div>
+          
+<div>
+<h1>Weak</h1>
+<h2>ضعيف</h2>
+<audio preload="auto" id="audio6" src="mp3/weak.mp3"></audio></div>
+          
+<div>
+<h1>Strong</h1>
+<h2>قوي</h2>
+<audio preload="auto" id="audio7" src="mp3/strong.mp3"></audio></div>
+    
+<div>
+<h1>Poor</h1>
+<h2>فقير</h2>
+<audio preload="auto" id="audio10" src="mp3/poor.mp3"></audio></div>
+   
+<div>
+<h1>Rich</h1>
+<h2>غني</h2>
+<audio preload="auto" id="audio11" src="mp3/rich.mp3"></audio></div>
+
+<div>
+<h1>happy</h1>
+<h2>سعيد</h2>
+<audio preload="auto" id="audio4" src="mp3/happy.mp3"></audio></div>
+           
+<div>
+<h1>Sad</h1>
+<h2>حزين</h2>
+<audio preload="auto" id="audio3" src="mp3/sad.mp3"></audio></div
+>
+
+<div>
+<h1>Wants</h1>
+<h2>يريد</h2>
+<audio preload="auto" id="audio5" src="mp3/wants.mp3"></audio></div>
+           
+<div>
+<h1>time</h1>
+<h2>وقت</h2>
+<audio preload="auto" id="audio11" src="mp3/time.mp3"></audio></div>
+
+<div>
+<h1>example</h1>
+<h2>مثال</h2>
+<audio preload="auto" id="audio11" src="mp3/example.mp3"></audio></div>
+
+<div>
+<h1>play </h1>
+<h2>يلعب</h2>
+<audio preload="auto" id="audio11" src="mp3/play .mp3"></audio></div>
+
+<div>
+<h1>size</h1>
+<h2>مقاس</h2>
+<audio preload="auto" id="audio11" src="mp3/size.mp3"></audio></div>
+
+<div>
+<h1>line</h1>
+<h2>خط</h2>
+<audio preload="auto" id="audio11" src="mp3/line.mp3"></audio></div>
+
+<div>
+<h1>section</h1>
+<h2>قسم</h2>
+<audio preload="auto" id="audio11" src="mp3/section.mp3"></audio></div>
+
+<div>
+<h1>passage</h1>
+<h2>ممر</h2>
+<audio preload="auto" id="audio11" src="mp3/passage.mp3"></audio></div>
+
+<div>
+<h1>loss</h1>
+<h2>خسارة</h2>
+<audio preload="auto" id="audio11" src="mp3/loss.mp3"></audio></div>
+
+<div>
+<h1>victory</h1>
+<h2>فوز</h2>
+<audio preload="auto" id="audio11" src="mp3/victory.mp3"></audio></div>
+
+<div>
+<h1>piece</h1>
+<h2>قطعة</h2>
+<audio preload="auto" id="audio11" src="mp3/piece.mp3"></audio></div>
+
+<div>
+<h1>straight</h1>
+<h2>مستقيم</h2>
+<audio preload="auto" id="audio11" src="mp3/straight.mp3"></audio></div>
+
+<div>
+<h1>future</h1>
+<h2>مستقبل</h2>
+<audio preload="auto" id="audio11" src="mp3/future.mp3"></audio></div>
+
+<div>
+<h1>search</h1>
+<h2>يبحث</h2>
+<audio preload="auto" id="audio11" src="mp3/search.mp3"></audio></div>
+
+<div>
+<h1>near</h1>
+<h2>قريب</h2>
+<audio preload="auto" id="audio11" src="mp3/near.mp3"></audio></div>
+
+<div>
+<h1>far</h1>
+<h2>بعيد</h2>
+<audio preload="auto" id="audio11" src="mp3/far.mp3"></audio></div>
+
+<div>
+<h1>idea</h1>
+<h2>فكرة</h2>
+<audio preload="auto" id="audio11" src="mp3/idea.mp3"></audio></div>
+
+<div>
+<h1>jump</h1>
+<h2>قفز</h2>
+<audio preload="auto" id="audio11" src="mp3/jump.mp3"></audio></div>
+
+<div>
+<h1>error</h1>
+<h2>خطأ</h2>
+<audio preload="auto" id="audio11" src="mp3/error.mp3"></audio></div>
+
+<div>
+<h1>try</h1>
+<h2>يحاول</h2>
+<audio preload="auto" id="audio11" src="mp3/try.mp3"></audio></div>
+
+<div>
+<h1>go</h1>
+<h2>يذهب</h2>
+<audio preload="auto" id="audio11" src="mp3/go.mp3"></audio></div>
+
+<div>
+<h1>help</h1>
+<h2>يساعد</h2>
+<audio preload="auto" id="audio11" src="mp3/help.mp3"></audio></div>
+
+<div>
+<h1>place</h1>
+<h2>مكان</h2>
+<audio preload="auto" id="audio11" src="mp3/place.mp3"></audio></div>
+
+<div>
+<h1>true</h1>
+<h2>حقيقي</h2>
+<audio preload="auto" id="audio11" src="mp3/true.mp3"></audio></div>
+
+<div>
+<h1>silence</h1>
+<h2>الصمت</h2>
+<audio preload="auto" id="audio11" src="mp3/silence.mp3"></audio></div>
+      
+<div>
+<h1>voice</h1>
+<h2>صوت</h2>
+<audio preload="auto" id="audio6" src="mp3/voice.mp3"></audio></div>
+          
+<div>
+<h1>job</h1>
+<h2>وظيفة</h2>
+<audio preload="auto" id="audio7" src="mp3/job.mp3"></audio></div>
+    
+<div>
+<h1>work</h1>
+<h2>عمل</h2>
+<audio preload="auto" id="audio5" src="mp3/work.mp3"></audio></div>
+          
+<div>
+<h1>problem</h1>
+<h2>مشكلة</h2>
+<audio preload="auto" id="audio4" src="mp3/problem.mp3"></audio></div>
+
+<div>
+<h1>under</h1>
+<h2>تحت</h2>
+<audio preload="auto" id="audio11" src="mp3/under.mp3"></audio></div>
+      
+<div>
+<h1>above</h1>
+<h2>فوق</h2>
+<audio preload="auto" id="audio6" src="mp3/above.mp3"></audio></div>
+          
+<div>
+<h1>behind</h1>
+<h2>خلف</h2>
+<audio preload="auto" id="audio7" src="mp3/behind.mp3"></audio></div>
+    
+<div>
+<h1>left</h1>
+<h2>يسار</h2>
+<audio preload="auto" id="audio5" src="mp3/left.mp3"></audio></div>
+          
+<div>
+<h1>right</h1>
+<h2>يمين</h2>
+<audio preload="auto" id="audio4" src="mp3/right.mp3"></audio></div>
+
+<div>
+<h2>imagination</h2>
+<h2>خيال</h2>
+<audio preload="auto" id="audio11" src="mp3/imagination.mp3"></audio></div>
+      
+<div>
+<h1>fact</h1>
+<h2>حقيقة </h2>
+<audio preload="auto" id="audio6" src="mp3/fact.mp3"></audio></div>
+          
+<div>
+<h1>life</h1>
+<h2>حياه</h2>
+<audio preload="auto" id="audio7" src="mp3/life.mp3"></audio></div>
+    
+<div>
+<h1>center</h1>
+<h2>مركز</h2>
+<audio preload="auto" id="audio5" src="mp3/center.mp3"></audio></div>
+          
+<div>
+<h1>take</h1>
+<h2>يأخذ</h2>
+<audio preload="auto" id="audio4" src="mp3/take.mp3"></audio></div>
+
+<div>
+<h1>drink</h1>
+<h2>يشرب</h2>
+<audio preload="auto" id="audio3" src="mp3/drink.mp3"></audio></div>
+
+<div>
+<h1>eat</h1>
+<h2>يأكل</h2>
+<audio preload="auto" id="audio10" src="mp3/eat.mp3"></audio></div>
+   
+<div>
+<h1>number</h1>
+<h2>عدد</h2>
+<audio preload="auto" id="audio11" src="mp3/number.mp3"></audio></div>
+      
+<div>
+<h1>holiday</h1>
+<h2>عطلة</h2>
+<audio preload="auto" id="audio6" src="mp3/holiday.mp3"></audio></div>
+          
+<div>
+<h1>little</h1>
+<h2>قليل</h2>
+<audio preload="auto" id="audio7" src="mp3/little.mp3"></audio></div>
+    
+<div>
+<h1>more</h1>
+<h2>اكثر</h2>
+<audio preload="auto" id="audio5" src="mp3/more.mp3"></audio></div>
+
+<div>
+<h1>refuse</h1>
+<h2>رفض</h2>
+<audio preload="auto" id="audio10" src="mp3/refuse.mp3"></audio></div>
+   
+<div>
+<h1>accepts</h1>
+<h2>يقبل</h2>
+<audio preload="auto" id="audio11" src="mp3/accepts.mp3"></audio></div>
+      
+<div>
+<h1>run</h1>
+<h2>يجري</h2>
+<audio preload="auto" id="audio6" src="mp3/run.mp3"></audio></div>
+          
+<div>
+<h1>walk</h1>
+<h2>يمشي</h2>
+<audio preload="auto" id="audio7" src="mp3/walk.mp3"></audio></div>
+    
+<div>
+<h1>wake up</h1>
+<h2>استيقظ</h2>
+<audio preload="auto" id="audio5" src="mp3/wake up.mp3"></audio></div>
+          
+<div>
+<h1>Sleeps</h1>
+<h2>ينام</h2>
+<audio preload="auto" id="audio4" src="mp3/sleeps.mp3"></audio></div>
+           
+<div>
+<h1>fruits</h1>
+<h2>فواكه </h2>
+<audio preload="auto" id="audio3" src="mp3/fruits.mp3"></audio></div>
+
+<div>
+<h1>Vegetables</h1>
+<h2>خضروات</h2>
+<audio preload="auto" id="audio10" src="mp3/vegetables.mp3"></audio></div>
+   
+<div>
+<h1>pencil</h1>
+<h2>قلم</h2>
+<audio preload="auto" id="audio11" src="mp3/pencil.mp3"></audio></div>
+      
+<div>
+<h1>plan</h1>
+<h2>خطة</h2>
+<audio preload="auto" id="audio6" src="mp3/plan.mp3"></audio></div>
+          
+<div>
+<h1>No</h1>
+<h2>لا</h2>
+<audio preload="auto" id="audio7" src="mp3/no.mp3"></audio></div>
+    
+<div>
+<h1>Yes</h1>
+<h2>نعم</h2>
+<audio preload="auto" id="audio5" src="mp3/yes.mp3"></audio></div>
+
+
+<div>
+<h1>After</h1>
+<h2>بعد</h2>
+<audio preload="auto" id="audio4" src="mp3/after.mp3"></audio></div>
+           
+<div>
+<h1>before</h1>
+<h2>قبل</h2>
+<audio preload="auto" id="audio3" src="mp3/before.mp3"></audio></div>
+
+<div>
+<h1>Answer</h1>
+<h2>إجابة</h2>
+<audio preload="auto" id="audio10" src="mp3/answer.mp3"></audio></div>
+   
+<div>
+<h1>Question</h1>
+<h2>سؤال</h2>
+<audio preload="auto" id="audio11" src="mp3/question.mp3"></audio></div>
+      
+<div>
+<h1>follow</h1>
+<h2>تابع</h2>
+<audio preload="auto" id="audio6" src="mp3/follow.mp3"></audio></div>
+          
+<div>
+<h1>Book</h1>
+<h2>كتاب </h2>
+<audio preload="auto" id="audio7" src="mp3/book.mp3"></audio></div>
+    
+<div>
+<h1>Paper</h1>
+<h2>ورقة </h2>
+<audio preload="auto" id="audio5" src="mp3/paper.mp3"></audio></div>
+          
+<div>
+<h1>Explain</h1>
+<h2>يشرح </h2>
+<audio preload="auto" id="audio4" src="mp3/explain.mp3"></audio></div>
+           
+<div>
+<h1>speaks</h1>
+<h2>يتكلم</h2>
+<audio preload="auto" id="audio3" src="mp3/speaks.mp3"></audio></div>
+
+<div>
+<h1>News</h1>
+<h2>خبر</h2>
+<audio preload="auto" id="audio10" src="mp3/news.mp3"></audio></div>
+   
+<div>
+<h1>give</h1>
+<h2>منح</h2>
+<audio preload="auto" id="audio11" src="mp3/give.mp3"></audio></div>
+      
+<div>
+<h1>delete </h1>
+<h2>حذف</h2>
+<audio preload="auto" id="audio6" src="mp3/delete .mp3"></audio></div>
+          
+<div>
+<h1>Picture</h1>
+<h2>صورة </h2>
+<audio preload="auto" id="audio7" src="mp3/picture.mp3"></audio></div>
+    
+<div>
+<h1>Look</h1>
+<h2>ينظر</h2>
+<audio preload="auto" id="audio5" src="mp3/look.mp3"></audio></div>
+          
+<div>
+<h1>see</h1>
+<h2>يري</h2>
+<audio preload="auto" id="audio4" src="mp3/see.mp3"></audio></div>
+           
+<div>
+<h1>listen</h1>
+<h2>استمع</h2>
+<audio preload="auto" id="audio3" src="mp3/listen.mp3"></audio></div>
+
+<div>
+<h2>Says</h2>
+<h1>يقول</h1>
+<audio preload="auto" id="audio10" src="mp3/says.mp3"></audio></div>
+   
+<div>
+<h1>sits</h1>
+<h2>يجلس</h2>
+<audio preload="auto" id="audio11" src="mp3/sits.mp3"></audio></div>
+      
+<div>
+<h1>Stands up</h1>
+<h2>يقف</h2>
+<audio preload="auto" id="audio6" src="mp3/stands up.mp3"></audio></div>
+          
+<div>
+<h1>Test</h1>
+<h2>اختبار</h2>
+<audio preload="auto" id="audio7" src="mp3/test.mp3"></audio></div>
+    
+<div>
+<h1>Exam</h1>
+<h2>امتحان</h2>
+<audio preload="auto" id="audio5" src="mp3/exam.mp3"></audio></div>
+          
+<div>
+<h1>sure</h1>
+<h2>متاكد</h2>
+<audio preload="auto" id="audio4" src="mp3/sure.mp3"></audio></div>
+           
+<div>
+<h1>Sells</h1>
+<h2>يبيع</h2>
+<audio preload="auto" id="audio3" src="mp3/sells.mp3"></audio></div>
+
+<div>
+<h1>Buy</h1>
+<h2>يشترى</h2>
+<audio preload="auto" id="audio10" src="mp3/buy.mp3"></audio></div>
+   
+<div>
+<h1>Price</h1>
+<h2>ثمن</h2>
+<audio preload="auto" id="audio11" src="mp3/price.mp3"></audio></div>
+
+<div>
+<h1>Normal</h1>
+<h2>عادي</h2>
+<audio preload="auto" id="audio11" src="mp3/normal.mp3"></audio></div>
+      
+<div>
+<h1>dark</h1>
+<h2>مضلم</h2>
+<audio preload="auto" id="audio6" src="mp3/dark.mp3"></audio></div>
+          
+<div>
+<h1>Funny</h1>
+<h2>مضحك</h2>
+<audio preload="auto" id="audio7" src="mp3/funny.mp3"></audio></div>
+    
+<div>
+<h1>moment</h1>
+<h2>لحظه</h2>
+<audio preload="auto" id="audio5" src="mp3/moment.mp3"></audio></div>
+          
+<div>
+<h1>Learn</h1>
+<h2>تعلم</h2>
+<audio preload="auto" id="audio4" src="mp3/learn.mp3"></audio></div>
+           
+<div>
+<h1>controls</h1>
+<h2>يتحكم</h2>
+<audio preload="auto" id="audio3" src="mp3/controls.mp3"></audio></div>
+
+<div>
+<h1>Known</h1>
+<h2>يعرف</h2>
+<audio preload="auto" id="audio10" src="mp3/known.mp3"></audio></div>
+   
+<div>
+<h1>nice</h1>
+<h2>لطيف </h2>
+<audio preload="auto" id="audio11" src="mp3/nice.mp3"></audio></div>
+      
+<div>
+<h1>Dream</h1>
+<h2>حلم</h2>
+<audio preload="auto" id="audio6" src="mp3/dream.mp3"></audio></div>
+          
+<div>
+<h1>Travel</h1>
+<h2>سافر</h2>
+<audio preload="auto" id="audio7" src="mp3/travel.mp3"></audio></div>
+    
+       
+
+
+      
+
+
+
+
+      
+
+
+
+   
+
+</div>
+<div id="slide-indicator" >
+<div id="rightside-display">
+<div class="active">
+<p>  <span class="play" onclick="speakfirst()">
+<svg id="playback" width="30" height="30" viewBox="0 0 20 20">
+<path style="fill:black" d="M9.344,2.593c-0.253-0.104-0.547-0.045-0.743,0.15L4.486,6.887H1.313c-0.377,0-0.681,0.305-0.681,0.681v4.916c0,0.377,0.304,0.681,0.681,0.681h3.154l4.137,4.142c0.13,0.132,0.304,0.201,0.482,0.201c0.088,0,0.176-0.017,0.261-0.052c0.254-0.105,0.42-0.354,0.42-0.629L9.765,3.224C9.765,2.947,9.599,2.699,9.344,2.593z M5.233,12.003c-0.128-0.127-0.302-0.2-0.483-0.2H1.994V8.249h2.774c0.182,0,0.355-0.072,0.483-0.201l3.151-3.173l0.001,10.305L5.233,12.003z">
+    </path>
+<path style="fill:black" d="M16.434,10.007c0-2.553-1.518-4.853-3.869-5.858C12.223,4,11.821,4.16,11.672,4.506c-0.148,0.346,0.013,0.746,0.359,0.894c1.846,0.793,3.041,2.6,3.041,4.608c0,1.997-1.188,3.799-3.025,4.592c-0.346,0.149-0.505,0.551-0.356,0.895c0.112,0.258,0.362,0.411,0.625,0.411c0.091,0,0.181-0.017,0.269-0.056C14.922,14.843,16.434,12.548,16.434,10.007z"></path>
+<path style="fill:black" d="M13.418,10.005c0-1.349-0.802-2.559-2.042-3.086c-0.346-0.144-0.745,0.015-0.894,0.362c-0.146,0.346,0.016,0.745,0.362,0.893c0.737,0.312,1.212,1.031,1.212,1.832c0,0.792-0.471,1.509-1.2,1.825c-0.345,0.149-0.504,0.551-0.352,0.895c0.112,0.257,0.362,0.41,0.625,0.41c0.091,0,0.181-0.017,0.27-0.057C12.625,12.545,13.418,11.339,13.418,10.005z">
+    </path>
+<path style="fill:black" d="M13.724,1.453c-0.345-0.15-0.746,0.012-0.895,0.358c-0.148,0.346,0.013,0.745,0.358,0.894c2.928,1.256,4.819,4.122,4.819,7.303c0,3.171-1.886,6.031-4.802,7.289c-0.346,0.149-0.505,0.55-0.356,0.894c0.112,0.258,0.362,0.412,0.626,0.412c0.09,0,0.181-0.019,0.269-0.056c3.419-1.474,5.626-4.826,5.626-8.54C19.368,6.282,17.152,2.923,13.724,1.453z"></path>
+  </svg></span></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+
+</div></div>
+
+<div class="controls">
+<p id="next" class="icons icon-next">
+<span>next</span></p>
+<p id="prev" class="icons icon-prev">
+<span>prev</span></p>
+</div></div></div></div>
+</body>
+</html>
