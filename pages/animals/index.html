@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Toddler Fun Area</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-waqnr0');
+	src:url('../fonts/icomoon.eot?#iefix-waqnr0') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-waqnr0') format('woff'),
+		url('../fonts/icomoon.ttf?-waqnr0') format('truetype'),
+		url('../fonts/icomoon.svg?-waqnr0#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background: #ba423a;
+	background-size: 200vh;
+	font:14px/1.5em Verdana, Geneva, sans-serif;
+	color:#444;
+}
+
+@media (min-width:1024px) {
+body {
+	background-size: 100vw 100vh;
+	background-repeat: repeat;
+ }
+}
+
+a
+{
+   text-decoration:none;
+   outline:none;
+}
+
+
+a img {
+  border:none;
+}
+
+.container
+{
+  margin: 3% auto;
+  position:relative;
+  min-height:600px;
+}
+
+@media (min-width:1024px){
+.container{
+	width:960px;
+ }
+}
+
+.cf:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.off
+{
+  display:none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.no-show{
+  visibility:hidden;
+  opacity: 0;
+}
+
+.transition{
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.loading
+{
+  font-size:1.5em;
+  font-weight:bold;
+  width:100%;
+  position:absolute;
+  top:30%;
+  left:30%;
+}
+
+#progressbar
+{
+  border:2px solid #777;
+  width:50%;
+}
+
+#progressbar p
+{
+  margin:0;
+  padding:1% 0;
+  width:0;
+  background-color:#f5f80c;
+}
+
+
+.side-nav{
+	list-style:none;
+	padding-left:0;
+}
+
+.side-nav li{
+	float:left;
+	width:25%;
+	text-align:center;
+}
+
+@media(min-width:992px){
+.side-nav{
+	float:left;
+	list-style:none;
+	width:15%;
+	padding-left:0;
+}
+.side-nav li{
+	float:none;
+	margin-bottom:15px;
+	width: 100%;
+}
+}
+
+@media(min-width:1024px){
+.side-nav li{
+	margin-bottom:0;
+}
+}
+
+.side-nav li a img{
+	width:100%;
+}
+
+@media (min-width:1200px){
+.side-nav li a img{
+	width:100%;
+}
+}
+
+.side-nav li:hover img{
+  -moz-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+
+.main_content{
+	clear: both;
+	margin:0 auto 3%;
+	margin-top: 40px;
+	width:95%;
+	padding:2% 5%;
+	border:3px solid #7b8f8e;
+	border-radius:15px;
+	background: #c7dcda; /* Fall back for browsers that donot support transparency */
+	background: rgba(199, 220, 218, 0.8);
+}
+@media(min-width:992px){
+.main_content{
+	float:right;
+	width:80%;
+	clear:none;
+}
+}
+
+h1,
+h2,
+h3{
+	text-align:center;
+	line-height: 1.4;
+}
+
+.main_content a{
+	color:#00B;
+}
+
+.main_content a:hover{
+	text-decoration:underline;
+}
+
+.slide{
+	width:50%;
+	float:left;
+	text-align:center;
+}
+
+.slide img{
+	border-radius:12px;
+	border:1px solid #7b8f8e;
+	width:70%;
+}
+
+.games-slide a img,
+.learning-slide a img{
+	width:100%;
+}
+p{
+  border-radius: 5px;
+}
+.note{
+	clear:both;
+	text-align:center;
+	font-size:small;
+}
+
+.box-wrap{
+	float:left;
+	width:50%;
+	margin:0 auto;
+}
+.box{
+	padding:0 9% 5%;
+}
+
+@media(min-width: 768px){
+.box-wrap{
+	width:33.33%;
+}
+}
+
+.box h4{
+	text-align:center;
+	color:#900;
+	margin:10px auto;
+	line-height: normal;
+}
+
+.box img{
+	width:100%;
+	text-align:center;
+	border-radius:12px;
+	border:4px solid #bbb;
+	-webkit-box-shadow: 0px 3px 5px -1px #333;
+    box-shadow: 0px 3px 5px -1px #333;  
+}
+
+.box img:hover{
+   -webkit-transform: rotate(5deg);
+   -moz-transform: rotate(5deg);
+   -o-transform: rotate(5deg);
+   -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+.scratch_games{
+	clear:both;
+	float:right;
+}
+
+.scratch_games a{
+	color:#fff;
+	font-weight:bold;
+	display:inline-block;
+	padding:10px;
+	line-height:20px;
+	background-color:#09F;
+	border-radius:30%/100%;
+	margin-left:5px;
+}
+
+#win-img,
+#game-over-img
+{
+  width:100%;
+  position:absolute;
+  top:20%;
+  left:10%;
+  display:none;
+  text-align:center;
+}
+
+#win-img img,
+#game-over-img img
+{
+	width:70%;
+}
+
+@media(min-width:600px){
+#win-img img,
+#game-over-img img
+{
+	width:50%;
+}
+}
+
+.button-box{
+	margin: 5px auto 10px;
+	position:relative;
+}
+
+.game-button{
+  font-size: 20px;
+  font-weight:bold;
+  color:white;
+  background-color:#005387;
+  border:2px solid #fff;
+  border-radius:5px;
+  padding:15px 40px;
+}
+
+.game-button:hover{
+  background-color:#0092bf;
+  cursor:pointer;
+}
+
+.speaker-controls{
+	position:absolute;
+	top:-5px;
+	left:150px;
+}
+
+.note{
+ clear:both;
+ text-align: justify; 
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.embed-responsive.embed-responsive-4by3 {
+   padding-bottom: 75%;
+}
+
+.slides{
+	position:relative;
+}
+
+#prev{
+	position:absolute;
+	background: red;
+	border: 1px solid black;
+	width: 70px;
+	height: 50px;
+	top:40%;
+	left:-7%;
+}
+
+#next{
+	position:absolute;
+	background: red;
+	border: 1px solid black;
+	width: 70px;
+	height: 50px;
+	top:40%;
+	right:-7%;
+}
+
+.icons{
+    font-family: 'icomoon';
+	font-size: 3rem;
+	margin-top: 300px;
+	cursor:pointer;
+	color:#444;
+}
+
+@media(min-width:768px){
+#prev{
+	left:-4%;
+}
+
+#next{
+	right:-4%;
+}
+	
+.icons{
+	font-size:25px;
+}
+}
+.icons span{
+font-size: 1rem;
+color: #fff;
+margin-left: 15px;
+}
+
+.hide{
+	visibility:hidden;
+}
+
+#slide-indicator{
+	clear:both;
+	margin-top:20px;
+}
+
+.facebook-like{
+	clear:both;
+	float:left;
+	margin:10px;
+}
+
+p.less-margin{
+	margin:0 auto 5px;
+}
+
+.hidden-xs{
+	display: none;
+}
+.visible-sm{
+	clear:both;
+	display: block;
+}
+
+@media (min-width:768px){
+.hidden-xs{
+	display: block;
+}
+.visible-sm{
+	display: none;
+}
+}
+    h1{
+	text-align:center;margin: -5px;
+}
+
+#leftside-display div,
+#rightside-display div{
+	display:none;border-radius: 10px;
+	height: 120px;
+}
+
+#leftside-display div.active,
+#rightside-display div.active{
+	display:block;
+}
+
+#leftside-display div{
+	background-color:#8889c9;
+	border-radius: 10px;
+}
+
+#leftside-display div,
+#rightside-display div img{
+	border:3px solid #7b8f8e;
+	margin:-5px 0 0;
+}
+
+#rightside-display div img{
+	width:100%;border-radius: 10px;
+	height: 230px;
+}
+
+h2{
+	font-size:30px;
+}
+
+@media(min-width:768px){
+h2{
+	font-size:40px;
+	padding:20px;
+}
+	
+#leftside-display div,
+#rightside-display div{
+	float:left;
+	width:48%;
+}
+
+
+#rightside-display div{
+	margin-left:4%;
+}
+	
+}
+
+@media(min-width:820px){
+h2{
+	font-size:60px;
+}
+}
+
+#slide-indicator p{
+	float:left;
+	width:40px;
+	height:40px;
+	border:3px solid #7b8f8e;
+	background-color:lightblue;
+	cursor:pointer;
+	opacity:0.7;
+	font-size:25px;
+	line-height:30px;
+	text-align:center;
+	margin:5px;
+}
+
+#slide-indicator p.active{
+	opacity:1;
+}
+.rtr{
+  width: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px;
+}
+  </style>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="learning1.js"></script>
+</head>
+<body>
+<div class="container cf">
+<nav>
+<ul class="side-nav">
+<li><a href = "https://mouradmore.github.io/Learn-English/" class="nav_home_img"><div class="rtr"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g style="--darkreader-inline-fill:rgba(81, 82, 83, 0.8);" data-darkreader-inline-fill=""><rect x="1" y="1" width="6" height="6" rx="1" ry="1"></rect><rect x="9" y="1" width="6" height="6" rx="1" ry="1"></rect><rect x="1" y="9" width="6" height="6" rx="1" ry="1"></rect><rect x="9" y="9" width="6" height="6" rx="1" ry="1"></rect></g></svg></div></a></li></ul></nav>
+  <div class="main_content cf">
+    
+    <div class="slides cf">
+    
+      <div id="leftside-display">
+        <div class="active">
+<h1>Cow</h1>
+<h2>بقرة</h2>
+<audio preload="auto" id="audio1" src="mp3/cow.wav"></audio></div>
+
+<div>
+<h1>Dog</h1>
+<h2>كلب</h2>
+<audio preload="auto" id="audio10" src="mp3/dog.wav"></audio></div>
+   
+<div>
+<h1>Cat</h1>
+<h2>قطة</h2>
+<audio preload="auto" id="audio11" src="mp3/cat.wav"></audio></div>
+      
+<div>
+<h1>Elephant</h1>
+<h2>الفيل</h2>
+<audio preload="auto" id="audio6" src="mp3/elephant.wav"></audio></div>
+          
+<div>
+<h1>Zebra</h1>
+<h2>الحمار الوحشي</h2>
+<audio preload="auto" id="audio7" src="mp3/zebra.wav"></audio></div>
+    
+<div>
+<h1>Bison</h1>
+<h2>الثور</h2>
+<audio preload="auto" id="audio5" src="mp3/bison.wav"></audio></div>
+          
+<div>
+<h1>Panda</h1>
+<h2>الباندا</h2>
+<audio preload="auto" id="audio4" src="mp3/panda.wav"></audio></div>
+           
+<div>
+<h1>Penguin</h1>
+<h2>البطريق</h2>
+<audio preload="auto" id="audio3" src="mp3/penguin.wav"></audio></div>
+
+<div>
+<h1>Hippopotamus</h1>
+<h2>فرس نهر</h2>
+<audio preload="auto" id="audio10" src="mp3/hippopotamus.wav"></audio></div>
+   
+<div>
+<h1>rhinoceros</h1>
+<h2>وحيد القرن</h2>
+<audio preload="auto" id="audio11" src="mp3/rhinocerous.wav"></audio></div>
+
+
+<div>
+<h1>Horse</h1>
+<h2>حصان</h2>
+<audio preload="auto" id="audio6" src="mp3/horse.wav"></audio></div>
+          
+<div>
+<h1>Giraffe</h1>
+<h2>زرافة</h2>
+<audio preload="auto" id="audio7" src="mp3/giraffe.wav"></audio></div>
+    
+<div>
+<h1>Lion</h1>
+<h2>أسد</h2>
+<audio preload="auto" id="audio5" src="mp3/lion.wav"></audio></div>
+          
+<div>
+<h1>Tiger</h1>
+<h2>نمر</h2>
+<audio preload="auto" id="audio4" src="mp3/tiger.wav"></audio></div>
+           
+<div>
+<h1>Bear</h1>
+<h2>دُبٌّ</h2>
+<audio preload="auto" id="audio3" src="mp3/bear.wav"></audio></div>
+
+<div>
+<h1>Sheep</h1>
+<h2>خروف</h2>
+<audio preload="auto" id="audio10" src="mp3/sheep.wav"></audio></div>
+   
+<div>
+<h1>Pig</h1>
+<h2>خنزير</h2>
+<audio preload="auto" id="audio11" src="mp3/pig.wav"></audio></div>
+      
+<div>
+<h1>Deer</h1>
+<h2>غزالة</h2>
+<audio preload="auto" id="audio6" src="mp3/deer.wav"></audio></div>
+          
+<div>
+<h1>Monkey</h1>
+<h2>قرد</h2>
+<audio preload="auto" id="audio7" src="mp3/monkey.wav"></audio></div>
+    
+<div>
+<h1>Squirrel</h1>
+<h2>سنجاب</h2>
+<audio preload="auto" id="audio5" src="mp3/squirrel.wav"></audio></div>
+          
+<div>
+<h1>Hen</h1>
+<h2>دجاجة</h2>
+<audio preload="auto" id="audio4" src="mp3/hen.wav"></audio></div>
+           
+<div>
+<h1>Rabbit</h1>
+<h2>أرنب</h2>
+<audio preload="auto" id="audio3" src="mp3/rabbit.wav"></audio></div>
+
+<div>
+<h1>bird</h1>
+<h2>عصفور</h2>
+<audio preload="auto" id="audio2" src="mp3/bird.mp3"></audio></div>
+  
+<div>
+<h1>crow</h1>
+<h2>غراب</h2>
+<audio preload="auto" id="audio8" src="mp3/crow.mp3"></audio></div>
+<div>
+<h1>dove</h1>
+<h2>حمامة</h2>
+<audio preload="auto" id="audio10" src="mp3/dove.mp3"></audio></div>
+   
+<div>
+<h1>fish</h1>
+<h2>سمكة</h2>
+<audio preload="auto" id="audio11" src="mp3/fish.mp3"></audio></div>
+      
+<div>
+<h1>crocodile</h1>
+<h2>تمساح</h2>
+<audio preload="auto" id="audio6" src="mp3/crocodile.mp3"></audio></div>
+          
+<div>
+<h1>spider</h1>
+<h2>العنكبوت</h2>
+<audio preload="auto" id="audio7" src="mp3/spider.mp3"></audio></div>
+    
+<div>
+<h1>frog</h1>
+<h2>ضفدع</h2>
+<audio preload="auto" id="audio5" src="mp3/frog.mp3"></audio></div>
+          
+        
+</div>
+<div id="slide-indicator" >
+<div id="rightside-display">
+<div class="active"><img src="img/cow.jpg"/>
+<p><span class="play" onclick="speakfirst()">
+<svg id="playback" width="30" height="30" viewBox="0 0 20 20">
+<path style="fill:black" d="M9.344,2.593c-0.253-0.104-0.547-0.045-0.743,0.15L4.486,6.887H1.313c-0.377,0-0.681,0.305-0.681,0.681v4.916c0,0.377,0.304,0.681,0.681,0.681h3.154l4.137,4.142c0.13,0.132,0.304,0.201,0.482,0.201c0.088,0,0.176-0.017,0.261-0.052c0.254-0.105,0.42-0.354,0.42-0.629L9.765,3.224C9.765,2.947,9.599,2.699,9.344,2.593z M5.233,12.003c-0.128-0.127-0.302-0.2-0.483-0.2H1.994V8.249h2.774c0.182,0,0.355-0.072,0.483-0.201l3.151-3.173l0.001,10.305L5.233,12.003z">
+    </path>
+<path style="fill:black" d="M16.434,10.007c0-2.553-1.518-4.853-3.869-5.858C12.223,4,11.821,4.16,11.672,4.506c-0.148,0.346,0.013,0.746,0.359,0.894c1.846,0.793,3.041,2.6,3.041,4.608c0,1.997-1.188,3.799-3.025,4.592c-0.346,0.149-0.505,0.551-0.356,0.895c0.112,0.258,0.362,0.411,0.625,0.411c0.091,0,0.181-0.017,0.269-0.056C14.922,14.843,16.434,12.548,16.434,10.007z"></path>
+<path style="fill:black" d="M13.418,10.005c0-1.349-0.802-2.559-2.042-3.086c-0.346-0.144-0.745,0.015-0.894,0.362c-0.146,0.346,0.016,0.745,0.362,0.893c0.737,0.312,1.212,1.031,1.212,1.832c0,0.792-0.471,1.509-1.2,1.825c-0.345,0.149-0.504,0.551-0.352,0.895c0.112,0.257,0.362,0.41,0.625,0.41c0.091,0,0.181-0.017,0.27-0.057C12.625,12.545,13.418,11.339,13.418,10.005z">
+    </path>
+<path style="fill:black" d="M13.724,1.453c-0.345-0.15-0.746,0.012-0.895,0.358c-0.148,0.346,0.013,0.745,0.358,0.894c2.928,1.256,4.819,4.122,4.819,7.303c0,3.171-1.886,6.031-4.802,7.289c-0.346,0.149-0.505,0.55-0.356,0.894c0.112,0.258,0.362,0.412,0.626,0.412c0.09,0,0.181-0.019,0.269-0.056c3.419-1.474,5.626-4.826,5.626-8.54C19.368,6.282,17.152,2.923,13.724,1.453z"></path>
+  </svg></span></p></div>
+<div><img src="img/dog.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/cat.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/elephant.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/zebra.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/bison.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/panda.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/penguin.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/hippopotamus.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/rhinocerous.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/horse.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/giraffe.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/lion.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/tiger.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/bear.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/sheep.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/pig.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/deer.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/monkey.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/squirrel.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+
+<div><img src="img/hen.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/rabbit.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/bird.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/crow.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/dove.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/fish1.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/crocodile.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/spider.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/frog.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+
+</div></div>
+
+<div class="controls">
+<p id="next" class="icons icon-next">
+<span>next</span></p>
+<p id="prev" class="icons icon-prev">
+<span>prev</span></p>
+</div></div></div></div>
+</body>
+</html>

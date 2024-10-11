@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>house</title>
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-waqnr0');
+	src:url('../fonts/icomoon.eot?#iefix-waqnr0') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-waqnr0') format('woff'),
+		url('../fonts/icomoon.ttf?-waqnr0') format('truetype'),
+		url('../fonts/icomoon.svg?-waqnr0#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background: #ba423a;
+	background-size: 200vh;
+	font:14px/1.5em Verdana, Geneva, sans-serif;
+	color:#444;
+}
+
+@media (min-width:1024px) {
+body {
+	background-size: 100vw 100vh;
+	background-repeat: repeat;
+ }
+}
+
+a
+{
+   text-decoration:none;
+   outline:none;
+}
+
+
+a img {
+  border:none;
+}
+
+.container
+{
+  margin: 3% auto;
+  position:relative;
+  min-height:600px;
+}
+
+@media (min-width:1024px){
+.container{
+	width:960px;
+ }
+}
+
+.cf:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.off
+{
+  display:none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.no-show{
+  visibility:hidden;
+  opacity: 0;
+}
+
+.transition{
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.loading
+{
+  font-size:1.5em;
+  font-weight:bold;
+  width:100%;
+  position:absolute;
+  top:30%;
+  left:30%;
+}
+
+#progressbar
+{
+  border:2px solid #777;
+  width:50%;
+}
+
+#progressbar p
+{
+  margin:0;
+  padding:1% 0;
+  width:0;
+  background-color:#f5f80c;
+}
+
+
+.side-nav{
+	list-style:none;
+	padding-left:0;
+}
+
+.side-nav li{
+	float:left;
+	width:25%;
+	text-align:center;
+}
+
+@media(min-width:992px){
+.side-nav{
+	float:left;
+	list-style:none;
+	width:15%;
+	padding-left:0;
+}
+.side-nav li{
+	float:none;
+	margin-bottom:15px;
+	width: 100%;
+}
+}
+
+@media(min-width:1024px){
+.side-nav li{
+	margin-bottom:0;
+}
+}
+
+.side-nav li a img{
+	width:100%;
+}
+
+@media (min-width:1200px){
+.side-nav li a img{
+	width:100%;
+}
+}
+
+.side-nav li:hover img{
+  -moz-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+
+.main_content{
+	clear: both;
+	margin:0 auto 3%;
+	margin-top: 40px;
+	width:95%;
+	padding:2% 5%;
+	border:3px solid #7b8f8e;
+	border-radius:15px;
+	background: #c7dcda; /* Fall back for browsers that donot support transparency */
+	background: rgba(199, 220, 218, 0.8);
+}
+@media(min-width:992px){
+.main_content{
+	float:right;
+	width:80%;
+	clear:none;
+}
+}
+
+h1,
+h2,
+h3{
+	text-align:center;
+	line-height: 1.4;
+}
+
+.main_content a{
+	color:#00B;
+}
+
+.main_content a:hover{
+	text-decoration:underline;
+}
+
+.slide{
+	width:50%;
+	float:left;
+	text-align:center;
+}
+
+.slide img{
+	border-radius:12px;
+	border:1px solid #7b8f8e;
+	width:70%;
+}
+
+.games-slide a img,
+.learning-slide a img{
+	width:100%;
+}
+p{
+  border-radius: 5px;
+}
+.note{
+	clear:both;
+	text-align:center;
+	font-size:small;
+}
+
+.box-wrap{
+	float:left;
+	width:50%;
+	margin:0 auto;
+}
+.box{
+	padding:0 9% 5%;
+}
+
+@media(min-width: 768px){
+.box-wrap{
+	width:33.33%;
+}
+}
+
+.box h4{
+	text-align:center;
+	color:#900;
+	margin:10px auto;
+	line-height: normal;
+}
+
+.box img{
+	width:100%;
+	text-align:center;
+	border-radius:12px;
+	border:4px solid #bbb;
+	-webkit-box-shadow: 0px 3px 5px -1px #333;
+    box-shadow: 0px 3px 5px -1px #333;  
+}
+
+.box img:hover{
+   -webkit-transform: rotate(5deg);
+   -moz-transform: rotate(5deg);
+   -o-transform: rotate(5deg);
+   -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+.scratch_games{
+	clear:both;
+	float:right;
+}
+
+.scratch_games a{
+	color:#fff;
+	font-weight:bold;
+	display:inline-block;
+	padding:10px;
+	line-height:20px;
+	background-color:#09F;
+	border-radius:30%/100%;
+	margin-left:5px;
+}
+
+#win-img,
+#game-over-img
+{
+  width:100%;
+  position:absolute;
+  top:20%;
+  left:10%;
+  display:none;
+  text-align:center;
+}
+
+#win-img img,
+#game-over-img img
+{
+	width:70%;
+}
+
+@media(min-width:600px){
+#win-img img,
+#game-over-img img
+{
+	width:50%;
+}
+}
+
+.button-box{
+	margin: 5px auto 10px;
+	position:relative;
+}
+
+.game-button{
+  font-size: 20px;
+  font-weight:bold;
+  color:white;
+  background-color:#005387;
+  border:2px solid #fff;
+  border-radius:5px;
+  padding:15px 40px;
+}
+
+.game-button:hover{
+  background-color:#0092bf;
+  cursor:pointer;
+}
+
+.speaker-controls{
+	position:absolute;
+	top:-5px;
+	left:150px;
+}
+
+.note{
+ clear:both;
+ text-align: justify; 
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.embed-responsive.embed-responsive-4by3 {
+   padding-bottom: 75%;
+}
+
+.slides{
+	position:relative;
+}
+
+#prev{
+	position:absolute;
+	background: red;
+	border: 1px solid black;
+	width: 70px;
+	height: 50px;
+	top:40%;
+	left:-7%;
+}
+
+#next{
+	position:absolute;
+	background: red;
+	border: 1px solid black;
+	width: 70px;
+	height: 50px;
+	top:40%;
+	right:-7%;
+}
+
+.icons{
+    font-family: 'icomoon';
+	font-size: 3rem;
+	margin-top: 300px;
+	cursor:pointer;
+	color:#444;
+}
+
+@media(min-width:768px){
+#prev{
+	left:-4%;
+}
+
+#next{
+	right:-4%;
+}
+	
+.icons{
+	font-size:25px;
+}
+}
+.icons span{
+font-size: 1rem;
+color: #fff;
+margin-left: 15px;
+}
+
+.hide{
+	visibility:hidden;
+}
+
+#slide-indicator{
+	clear:both;
+	margin-top:20px;
+}
+
+.facebook-like{
+	clear:both;
+	float:left;
+	margin:10px;
+}
+
+p.less-margin{
+	margin:0 auto 5px;
+}
+
+.hidden-xs{
+	display: none;
+}
+.visible-sm{
+	clear:both;
+	display: block;
+}
+
+@media (min-width:768px){
+.hidden-xs{
+	display: block;
+}
+.visible-sm{
+	display: none;
+}
+}
+    h1{
+	text-align:center;margin: -5px;
+}
+
+#leftside-display div,
+#rightside-display div{
+	display:none;border-radius: 10px;
+	height: 120px;
+}
+
+#leftside-display div.active,
+#rightside-display div.active{
+	display:block;
+}
+
+#leftside-display div{
+	background-color:#8889c9;
+	border-radius: 10px;
+}
+
+#leftside-display div,
+#rightside-display div img{
+	border:3px solid #7b8f8e;
+	margin:-5px 0 0;
+}
+
+#rightside-display div img{
+	width:100%;border-radius: 10px;
+	height: 230px;
+}
+
+h2{
+	font-size:30px;
+}
+
+@media(min-width:768px){
+h2{
+	font-size:40px;
+	padding:20px;
+}
+	
+#leftside-display div,
+#rightside-display div{
+	float:left;
+	width:48%;
+}
+
+
+#rightside-display div{
+	margin-left:4%;
+}
+	
+}
+
+@media(min-width:820px){
+h2{
+	font-size:60px;
+}
+}
+
+#slide-indicator p{
+	float:left;
+	width:40px;
+	height:40px;
+	border:3px solid #7b8f8e;
+	background-color:lightblue;
+	cursor:pointer;
+	opacity:0.7;
+	font-size:25px;
+	line-height:30px;
+	text-align:center;
+	margin:5px;
+}
+
+#slide-indicator p.active{
+	opacity:1;
+}
+
+  </style> 
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="learning1.js"></script>
+</head>
+<body>
+<div class="container cf">
+  <div class="main_content cf">
+    
+    <div class="slides cf">
+    
+      <div id="leftside-display">
+        <div class="active">
+<h1>House</h1>
+<h2>منزل</h2>
+<audio preload="auto" id="audio1" src="mp3/house.mp3"></audio></div>
+
+<div>
+<h1>home</h1>
+<h2>بيت</h2>
+<audio preload="auto" id="audio1" src="mp3/home.mp3"></audio></div>
+
+<div>
+<h1>Door</h1>
+<h2>باب</h2>
+<audio preload="auto" id="audio10" src="mp3/door.mp3"></audio></div>
+   
+<div>
+<h1>window</h1>
+<h2>نافذة او شباك</h2>
+<audio preload="auto" id="audio11" src="mp3/window.mp3"></audio></div>
+      
+<div>
+<h1>room</h1>
+<h2>غرفة</h2>
+<audio preload="auto" id="audio6" src="mp3/room.mp3"></audio></div>
+          
+<div>
+<h1>Bathroom</h1>
+<h2>حمام</h2>
+<audio preload="auto" id="audio7" src="mp3/bathroom.mp3"></audio></div>
+    
+<div>
+<h1>toilet</h1>
+<h2>مرحاض</h2>
+<audio preload="auto" id="audio5" src="mp3/toilet.mp3"></audio></div>
+          
+<div>
+<h1>kitchen</h1>
+<h2>مطبخ</h2>
+<audio preload="auto" id="audio4" src="mp3/kitchen.mp3"></audio></div>
+           
+<div>
+<h1>Dining room</h1>
+<h2>غرفة طعام</h2>
+<audio preload="auto" id="audio3" src="mp3/dining-room.mp3"></audio></div>
+
+<div>
+<h1>bed room</h1>
+<h2>غرفة نوم</h2>
+<audio preload="auto" id="audio10" src="mp3/bed-room.mp3"></audio></div>
+   
+<div>
+<h1>Key</h1>
+<h2>مفتاح</h2>
+<audio preload="auto" id="audio11" src="mp3/Key.mp3"></audio></div>
+
+
+<div>
+<h1>padlock</h1>
+<h2>قفل</h2>
+<audio preload="auto" id="audio6" src="mp3/padlock.mp3"></audio></div>
+          
+<div>
+<h1>Table</h1>
+<h2>طاولة</h2>
+<audio preload="auto" id="audio7" src="mp3/table.mp3"></audio></div>
+    
+<div>
+<h1>chair</h1>
+<h2>كرسي</h2>
+<audio preload="auto" id="audio5" src="mp3/chair.mp3"></audio></div>
+          
+<div>
+<h1>Bed</h1>
+<h2>سرير</h2>
+<audio preload="auto" id="audio4" src="mp3/bed.mp3"></audio></div>
+           
+<div>
+<h1>Pillow</h1>
+<h2>وسادة</h2>
+<audio preload="auto" id="audio3" src="mp3/pillow.mp3"></audio></div>
+
+<div>
+<h1>closet</h1>
+<h2>خزانة</h2>
+<audio preload="auto" id="audio10" src="mp3/closet.mp3"></audio></div>
+   
+<div>
+<h1>mirror</h1>
+<h2>مرآة</h2>
+<audio preload="auto" id="audio11" src="mp3/mirror.mp3"></audio></div>
+      
+<div>
+<h1>faucet</h1>
+<h2>حنفية</h2>
+<audio preload="auto" id="audio6" src="mp3/faucet.mp3"></audio></div>
+          
+<div>
+<h1>carpet</h1>
+<h2>سجادة</h2>
+<audio preload="auto" id="audio7" src="mp3/carpet.mp3"></audio></div>
+    
+<div>
+<h1>curtains</h1>
+<h2>ستائر</h2>
+<audio preload="auto" id="audio5" src="mp3/curtains.mp3"></audio></div>
+          
+<div>
+<h1>Television</h1>
+<h2>التلفاز</h2>
+<audio preload="auto" id="audio4" src="mp3/television.mp3"></audio></div>
+           
+<div>
+<h1>Cup</h1>
+<h2>كوب</h2>
+<audio preload="auto" id="audio3" src="mp3/cup.mp3"></audio></div>
+
+<div>
+<h1>Knife</h1>
+<h2>سكين</h2>
+<audio preload="auto" id="audio2" src="mp3/Knife.mp3"></audio></div>
+  
+<div>
+<h1>spoon</h1>
+<h2>ملعقة</h2>
+<audio preload="auto" id="audio8" src="mp3/spoon.mp3"></audio></div>
+<div>
+<h1>fork</h1>
+<h2>شوكة</h2>
+<audio preload="auto" id="audio10" src="mp3/fork.mp3"></audio></div>
+   
+<div>
+<h1>Dish</h1>
+<h2>صحن</h2>
+<audio preload="auto" id="audio11" src="mp3/dish.mp3"></audio></div>
+      
+<div>
+<h1>plate</h1>
+<h2>طبق</h2>
+<audio preload="auto" id="audio6" src="mp3/plate.mp3"></audio></div>
+          
+<div>
+<h1>soap</h1>
+<h2>صابون</h2>
+<audio preload="auto" id="audio7" src="mp3/soap.mp3"></audio></div>
+    
+</div>
+<div id="slide-indicator" >
+<div id="rightside-display">
+<div class="active"><img src="img/house.jpg"/>
+<p><span class="play" onclick="speakfirst()">
+<svg id="playback" width="30" height="30" viewBox="0 0 20 20">
+<path style="fill:black" d="M9.344,2.593c-0.253-0.104-0.547-0.045-0.743,0.15L4.486,6.887H1.313c-0.377,0-0.681,0.305-0.681,0.681v4.916c0,0.377,0.304,0.681,0.681,0.681h3.154l4.137,4.142c0.13,0.132,0.304,0.201,0.482,0.201c0.088,0,0.176-0.017,0.261-0.052c0.254-0.105,0.42-0.354,0.42-0.629L9.765,3.224C9.765,2.947,9.599,2.699,9.344,2.593z M5.233,12.003c-0.128-0.127-0.302-0.2-0.483-0.2H1.994V8.249h2.774c0.182,0,0.355-0.072,0.483-0.201l3.151-3.173l0.001,10.305L5.233,12.003z">
+    </path>
+<path style="fill:black" d="M16.434,10.007c0-2.553-1.518-4.853-3.869-5.858C12.223,4,11.821,4.16,11.672,4.506c-0.148,0.346,0.013,0.746,0.359,0.894c1.846,0.793,3.041,2.6,3.041,4.608c0,1.997-1.188,3.799-3.025,4.592c-0.346,0.149-0.505,0.551-0.356,0.895c0.112,0.258,0.362,0.411,0.625,0.411c0.091,0,0.181-0.017,0.269-0.056C14.922,14.843,16.434,12.548,16.434,10.007z"></path>
+<path style="fill:black" d="M13.418,10.005c0-1.349-0.802-2.559-2.042-3.086c-0.346-0.144-0.745,0.015-0.894,0.362c-0.146,0.346,0.016,0.745,0.362,0.893c0.737,0.312,1.212,1.031,1.212,1.832c0,0.792-0.471,1.509-1.2,1.825c-0.345,0.149-0.504,0.551-0.352,0.895c0.112,0.257,0.362,0.41,0.625,0.41c0.091,0,0.181-0.017,0.27-0.057C12.625,12.545,13.418,11.339,13.418,10.005z">
+    </path>
+<path style="fill:black" d="M13.724,1.453c-0.345-0.15-0.746,0.012-0.895,0.358c-0.148,0.346,0.013,0.745,0.358,0.894c2.928,1.256,4.819,4.122,4.819,7.303c0,3.171-1.886,6.031-4.802,7.289c-0.346,0.149-0.505,0.55-0.356,0.894c0.112,0.258,0.362,0.412,0.626,0.412c0.09,0,0.181-0.019,0.269-0.056c3.419-1.474,5.626-4.826,5.626-8.54C19.368,6.282,17.152,2.923,13.724,1.453z"></path>
+  </svg></span></p></div>
+<div><img src="img/home.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/door.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/window.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/room.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/bathroom.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/toilet.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/kitchen.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/dining room.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/bed room.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/Key.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/padlock.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/table.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/chair.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/bed.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/pillow.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/closet.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/mirror.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/faucet.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/carpet.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/curtains.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/television.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/cup.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/Knife.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/spoon.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/fork.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/dish.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/plate.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+<div><img src="img/soap.jpg"/><p><svg width="30" height="30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playback"></use></svg></p></div>
+
+
+</div></div>
+
+<div class="controls">
+<p id="next" class="icons icon-next">
+<span>next</span></p>
+<p id="prev" class="icons icon-prev">
+<span>prev</span></p>
+</div></div></div></div>
+
+</body>
+</html>
