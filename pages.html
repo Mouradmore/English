@@ -1,0 +1,368 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet" />
+<title>تصيم تطبيق ياسين تيفي -   </title>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+
+
+<style type="text/css">
+.grid-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 5px 5px;
+padding: 10px;
+}
+.grid1-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(1, 1fr);
+grid-gap: 10px;
+
+color: white;
+padding: px;
+}
+h1 {
+text-align: center;
+margin-top: 1px;
+font-weight: bold;
+font-family: "Readex Pro", sans-serif;
+
+}
+
+h2 {
+text-align: center;
+margin-top: 0.5px;
+font-size: 12px;
+color: #8d8daa;
+font-family: "Readex Pro", sans-serif;
+font-weight: bold;
+}
+
+button {
+border-radius: 5px;
+background-image: linear-gradient(to right, #ffffff, #ffffff);
+/*border-color: #ba423a;*/
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border: none;
+padding: 10px;
+margin: 3px;
+height: 140px;
+width: 110px;
+cursor: pointer;
+}
+
+.button {
+text-align: center;
+}
+ {
+display: block;
+}
+button:active {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+</style>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+body {
+padding: 0;
+margin: 0;
+user-select: none;
+list-style: none;
+background: #ffffff;
+background-size: cover;
+font-weight: 500;
+font-size: 16px;
+text-align: right;
+margin: auto;
+/* position: relative; */
+direction: ltr;
+background: #ba423a;
+}
+h3 {
+text-align: center;
+/* text-align: right; */
+/* padding-right: 65px; */
+/* padding-top: 2px;
+    font-size: medium; */
+font-weight: bold;
+font-family: "Readex Pro", sans-serif;
+}
+header {
+/*background: #ba423a;*/
+padding: 2px;
+color: #fff;
+font-size: 1rem;
+margin-bottom: 10px;
+position: fixed;
+top: 0;
+height: 60px;
+width: 100%;
+/*box-shadow: 0px 0px 7px black;
+z-index: 1;*/
+}
+#i1 {
+position: fixed;
+top: 21px;
+right: 17px;
+font-size: 40px;
+}
+#i2 {
+position: fixed;
+top: 21px;
+left: 14px;
+font-size: 40px;
+}
+#i3 {
+position: fixed;
+top: 16px;
+left: 40px;
+font-size: 40px;
+}
+#page:hover {
+background: none;
+}
+#page {
+margin-top: 75px;
+width: 100%;
+margin-bottom: 30px;
+}
+#page a:hover {
+background: #fff;
+}
+#page .ar {
+height: 50px;
+padding-top: 2px;
+padding-bottom: 2px;
+margin-bottom: 11px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 15px;
+width: 91%;
+display: inline-block;
+margin-right: 14px;
+margin-left: 14px;
+background: white;
+}
+#page .ar img {
+/*height:50px;
+margin-right:10px;
+width:50px;
+padding-bottom:4px;
+*/
+height: 50px;
+margin-right: 10px;
+width: 50px;
+padding-bottom: 4px;
+}
+#page .ar p {
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+/* position: absolute; */
+/* margin-right: 20px; */
+/* margin-top: -40px; */
+display: inline-block;
+font-weight: 550;
+color: rgba(188, 17, 21, 255);
+}
+</style>
+<style>
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+background-color: #1940d8;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+.sidenav .ar {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 15px;
+color: #fff;
+display: block;
+transition: 0.3s;
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+}
+.sidenav .ar:hover {
+color: #d9c9c9;
+}
+.sidenav .closebtn {
+position: absolute;
+top: 5px;
+right: 0;
+font-size: 15px;
+margin-left: 0px;
+}
+@media screen and (max-height: 450px) {
+.sidenav {
+padding-top: 15px;
+}
+.sidenav .ar {
+font-size: 18px;
+}
+}
+html {
+overflow-x: hidden;
+}
+::-webkit-scrollbar {
+width: 7px;
+}
+::-webkit-scrollbar-thumb {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 0;
+background-image: -webkit-linear-gradient(top, #bc1115 100%, #000 100%);
+}
+::-webkit-scrollbar-track {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 100px;
+}
+a{
+  text-decoration: none;
+}
+</style>
+</head>
+<body dir="rtl">
+<header>
+  
+<!--a class="ar" href="  رابط صفحه الرجوع هنا   "><i id="i2" class="fa fa-arrow-left" style="font-size: 20px; color: #fff; margin-top: 2px;"></i></a-->
+
+<center><h3>InTexT English</h3></center>
+
+<!--- القائمة --->
+<!--div id="mySidenav" class="sidenav">
+
+<div class="col-md-9">
+<img src="https://i.ibb.co/Vv0LDmG/net-livee-kora-1.png" style="width: 180px; height: `; /* margin: 15px; */ padding: 10px; margin-top: -34px; margin-right: 15px;" />
+</div>
+
+
+<a class="ar" href="رابط"> <i class="fa fa-share"></i> مشاركه التطبيق </a>
+<a class="ar" href="رابط"> <i class="fa fa-bolt"></i> سياسيه الخصوصيه </a>
+<a class="ar" href="رابط"> <i class="fa fa-envelope"></i> اتصل بنا </a>
+<a class="ar" href="javascript:void(0)" onclick="closeNav()"> × اغلاق القائمه </a>
+</div-->
+<!--span style="font-size: 30px; cursor: pointer;" onclick="openNav()">
+<i id="i1" class="fa fa-bars" style="font-size: 20px; color: #fff;"></i>
+</span-->
+</header>
+<div id="page">
+<div class="grid1-container">
+<div align="center" class="button">
+<div id="buttons-list">
+<!--- اقسام التطبيق --->
+
+<button><a href="pages/number.html">
+<img src="img/img03.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>أرقام</h2></a>
+</button>
+
+<button>
+<a href="pages/time.html">
+<img src="img/img02.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>وقت</h2></a>
+</button>
+
+<button><a href="pages/Day">
+<img src="img/img01.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>أشهر السنة</h2></a>
+</button>
+
+<button><a href="pages/Colors">
+<img src="img/img04.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>الالوان</h2></a>
+</button>
+
+<button>
+<a href="pages/direction">
+<img src="img/img05.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>اتجاهات</h2></a>
+</button>
+
+<button><a href="pages/treatment">
+<img src="img/img06.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>علاج</h2></a>
+</button>
+
+<button><a href="pages/tools">
+<img src="img/img08.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>ادوات</h2></a>
+</button>
+
+<button>
+<a href="pages/Human-body">
+<img src="img/img18.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>جسم الانسان</h2></a>
+</button>
+
+<button><a href="pages/family-members">
+<img src="img/img09.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>العائلة</h2></a>
+</button>
+
+<button><a href="pages/house">
+<img src="img/img16.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>المنزل</h2></a>
+</button>
+
+<button><a href="pages/food">
+<img src="img/img07.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>طعام وشراب</h2></a>
+</button>
+
+<button><a href="pages/weather">
+<img src="img/img15.jpg" style="border-radius: 1px;" height="80px" width="80px" vspace="5px" />
+<h2>طقس</h2></a>
+</button>
+
+<button><a href="pages/clothes">
+<img src="img/img11.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>ملابس</h2></a>
+</button>
+
+<button><a href="pages/job">
+<img src="img/img17.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>وظيفة</h2></a>
+</button>
+
+<button><a href="pages/animals">
+<img src="img/img14.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>حيوانات</h2></a>
+</button>
+
+<button><a href="pages/city">
+<img src="img/img13.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>المدينة</h2></a>
+</button>
+
+<button><a href="pages/vegetables-and-fruits">
+<img src="img/img12.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>خضر وفواكه</h2></a>
+</button>
+
+<button><a href="pages/nature">
+<img src="img/img10.jpg" style="border-radius: 8px;" height="80px" width="80px" vspace="5px" />
+<h2>طبيعة</h2></a>
+</button>
+</div>
+
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</div>
+</div>
+</div>
+</header>
+</body>
